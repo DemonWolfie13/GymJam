@@ -1,0 +1,136 @@
+## LAST EDITED 1:43 2 NOV #
+
+Code to enable virtualenv: .\venv\Scripts\activate
+
+use modal bootstrap for files
+pagination for pages
+
+Colour codes
+Black for site : 111111
+grey : 222222
+yellow: #ffc119
+
+Youtube link: https://www.youtube.com/watch?v=2YOBmELm_v0
+YT link2 : https://www.youtube.com/watch?v=dam0GPOAvVI&t=2978s
+           https://github.com/techwithtim/Flask-Web-App-Tutorial/tree/main
+
+Backup proj: https://www.youtube.com/watch?v=th4OBktqK1I
+
+
+database = info
+table = members
+
+
+############################################################
+in home.html... old code
+
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+    %}
+
+    <!--MOVING SLIDE-->
+    
+<div id="carouselExampleCaptions" class="carousel slide mx-auto d-flex justify-content-center", data-bs-ride="carousel" >
+    <div class="carousel-indicators" >
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{{url_for('static',filename='img/main1.jpg')}}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Welcome to MuscularSapien</h5>
+          <p>Find various exercise to work your <body>
+          </body></p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{{url_for('static',filename='img/main2.png')}}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Perfection</h5>
+          <p>perfection is achieved only thorugh tireles hardwork</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{{url_for('static',filename='img/main3.png')}}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Dont give up!</h5>
+          <p>Be consistant and remember your goal</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <br>
+  <br>
+  <br>
+
+<!--CARDS-->
+
+<div class="homecard mx-auto d-flex justify-content-center">
+  <div class="card mx-auto d-flex justify-content-center mb-3">
+  <img src="{{url_for('static',filename='img/arm1.png')}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title text-center">ARMS</h5>
+    <p class="card-text text-center">Exercise to build those arms!!.</p>
+    <a href="/arms" class="btn btn-primary mx-auto d-block">Lets go!</a>
+  </div>
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="homecard mx-auto d-flex justify-content-center">
+  <div class="card mx-auto d-flex justify-content-center mb-3">
+  <img src="{{url_for('static',filename='img/core1.png')}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title text-center">CORE</h5>
+    <p class="card-text text-center">Exercise to build that core!!!.</p>
+    <a href="/core" class="btn btn-primary mx-auto d-block" >Lets go!</a>
+  </div>
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="homecard mx-auto d-flex justify-content-center">
+  <div class="card mx-auto d-flex justify-content-center mb-3">
+  <img src="{{url_for('static',filename='img/legs1.png')}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title text-center">LEGS</h5>
+    <p class="card-text text-center">Exercise to build those legs!!.</p>
+    <a href="legs" class="btn btn-primary mx-auto d-block">Lets go!</a>
+  </div>
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="homecard mx-auto d-flex justify-content-center" >
+  <div class="card mb-3" >
+  <img src="{{url_for('static',filename='img/yoga1.png')}}" class="card-img-top" style="height: 430px; alt="...">
+  <div class="card-body">
+    <h5 class="card-title text-center">YOGA</h5>
+    <p class="card-text text-center">Relax with yoga!!</p>
+    <a href="yoga" class="btn btn-primary mx-auto d-block">Let's go!</a>
+  </div>
+</div>
+</div>
+
+
+  <br>
+  <div class="rectangular-block1"></div>
+
+
+
+    {% endblock %}
